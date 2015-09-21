@@ -1,7 +1,13 @@
-﻿
+﻿@model Application.Models.EducationViewModel
 @{
     ViewBag.Title = "MyForm";
 }
 
 <h2>MyForm</h2>
 
+<table>
+    <tr>
+        <th>@Html.LabelFor(x => x.Country)</th>
+        <td>@Html.DropDownListFor(x => x.Country, Model.GetCountries())<span class="required">*</span></td>
+    </tr>
+</table>
